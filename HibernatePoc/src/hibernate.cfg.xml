@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC  
+       "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+       "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="hibernatePoc">
+     	<property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">admin</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mysqlDb</property>
+        <property name="hibernate.connection.username">user</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+        <property name="hibernate.cache.use_query_cache">true</property>
+		<property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>  
+        <property name="show_sql">true</property>
+       <!--  <mapping class="one.to.one.mapping.Employees"/>
+        <mapping class="one.to.one.mapping.EmployeeDetails"/>-->
+        <!--  <mapping class="one.to.one.mapping.eg2.Worker"/>
+        <mapping class="one.to.one.mapping.eg2.WorkerDetail"/>-->
+        
+       <!--<mapping class="one.to.many.mapping.College"/>
+        <mapping class="one.to.many.mapping.Student"/>-->
+        
+         <!-- <mapping class="Many.to.Many.Event"/>
+        <mapping class="Many.to.Many.Delegate"/> -->
+        
+        <!-- <mapping class="EmbeddedEg1.Address"/>    
+          <mapping class="inheritanceEg1.Vehicle"/>
+         <mapping class="inheritanceEg1.TwoWheeler"/>
+         <mapping class="inheritanceEg1.Car"/>  -->   
+         
+         <!--  Collection and Named query -->
+        <!--  <mapping class="collectionEg1.User"/> -->
+         <mapping class="hibernateMethods.Person"/> 
+         
+        
+    </session-factory>
+</hibernate-configuration>
